@@ -35,27 +35,35 @@ const DisplayData = () => {
             {finalData.map((data) => (
               <TableRow key={data.location}>
                 <TableCell>
-                  {data.team1Name} ({data.matchLocationTeam1})
+                  {data.team1Name ? data.team1Name : "-"} (
+                  {data.matchLocationTeam1 ? data.matchLocationTeam1 : ""})
                 </TableCell>
                 <TableCell>
-                  {data.team2Name} ({data.matchLocationTeam2})
+                  {data.team2Name ? data.team2Name : "-"} (
+                  {data.matchLocationTeam2 ? data.matchLocationTeam2 : ""})
                 </TableCell>
-                <TableCell>{data.matchType}</TableCell>
+                <TableCell>{data.matchType ? data.matchType : "-"}</TableCell>
                 <TableCell>
                   {data.tournamentName ? data.tournamentName : "-"}
                 </TableCell>
                 <TableCell>
-                  {moment(data.startTime).format("MMMM Do YYYY, h:mm:ss a")}
+                  {data.startTime
+                    ? moment(data.startTime).format("MMMM Do YYYY, h:mm:ss a")
+                    : "-"}
                 </TableCell>
                 <TableCell>
-                  {moment(data.endTime).format("MMMM Do YYYY, h:mm:ss a")}
+                  {data.endTime
+                    ? moment(data.endTime).format("MMMM Do YYYY, h:mm:ss a")
+                    : "-"}
                 </TableCell>
-                <TableCell>{data.matchLocation}</TableCell>
+                <TableCell>
+                  {data.matchLocation ? data.matchLocation : "-"}
+                </TableCell>
                 <TableCell>
                   <textarea
                     style={{ width: "150px", height: "150px", border: "none" }}
                   >
-                    {data.comments}
+                    {data.comments ? data.comments : ""}
                   </textarea>
                 </TableCell>
               </TableRow>
