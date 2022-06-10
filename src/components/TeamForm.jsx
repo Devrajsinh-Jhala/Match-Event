@@ -94,7 +94,7 @@ const TeamForm = () => {
               setUserData({ ...userData, team2Name: e.target.value })
             }
             style={{ marginBottom: "10px" }}
-            label="team2Name"
+            label="Team-2 Name"
             id="outlined-size-small"
             placeholder="Enter the name of the team"
             size="small"

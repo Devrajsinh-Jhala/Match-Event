@@ -27,7 +27,7 @@ const FriendlyForm = () => {
           <div>
             <DateTimePicker
               renderInput={(props) => <TextField {...props} />}
-              label="DateTimePicker"
+              label="Start Date and Time"
               value={userData["startTime"]}
               onChange={(e) => setUserData({ ...userData, startTime: e })}
             />
@@ -49,7 +49,7 @@ const FriendlyForm = () => {
           <div>
             <DateTimePicker
               renderInput={(props) => <TextField {...props} />}
-              label="DateTimePicker"
+              label="End Date and Time"
               value={userData["endTime"]}
               onChange={(e) => setUserData({ ...userData, endTime: e })}
             />
